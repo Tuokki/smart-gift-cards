@@ -1,12 +1,20 @@
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
-import {Component} from 'angular2/core';
-import {bootstrap} from 'angular2/platform/browser';
+import {Component} from '@angular/core';
+import {bootstrap} from 'angular2-meteor-auto-bootstrap';
+import {Mongo} from 'meteor/mongo';
+import { Parties } from '../collections/parties';
 
 @Component({
   selector: 'app',
   templateUrl: 'client/app.html'
 })
 
-class SmartGiftCards { }
+class SmartGiftCards {
+  parties: Mongo.Cursor<Object>;
+
+  constructor () {
+    this.parties = Parties.find();
+  }
+}
 bootstrap(SmartGiftCards);
