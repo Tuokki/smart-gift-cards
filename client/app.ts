@@ -3,7 +3,7 @@ import 'zone.js/dist/zone';
 import {Component} from '@angular/core';
 import {bootstrap} from 'angular2-meteor-auto-bootstrap';
 import {Mongo} from 'meteor/mongo';
-import { Parties } from '../collections/parties';
+import {GiftCards} from '../collections/gift-cards';
 
 @Component({
   selector: 'app',
@@ -11,10 +11,10 @@ import { Parties } from '../collections/parties';
 })
 
 class SmartGiftCards {
-  parties: Mongo.Cursor<Object>;
+  cards: Mongo.Cursor<Object>;
 
   constructor () {
-    this.parties = Parties.find();
+    this.cards = GiftCards.find();
   }
 }
 bootstrap(SmartGiftCards);

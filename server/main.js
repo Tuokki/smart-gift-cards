@@ -1,4 +1,4 @@
-import { Meteor } from 'meteor/meteor';
-import {loadParties} from './load-parties.ts';
+import {Meteor} from 'meteor/meteor';
+import {loadGiftCards} from './load-gift-cards.ts';
 
-Meteor.startup(loadParties);
+Meteor.startup(loadGiftCards);

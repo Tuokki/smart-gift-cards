@@ -1,12 +1,11 @@
-smart1:<br/>
-<p>1 + 2 = {{ 1 + 2 }}</p>
+<p>Omistat seuraavat lahjakortit:</p>
 
 <div>
   <ul>
-    <li *ngFor="let party of parties">
-      {{party.name}}
-      <p>{{party.description}}</p>
-      <p>{{party.location}}</p>
+    <li *ngFor="let card of cards">
+      {{card.name}}
+      <p>{{card.description}}</p>
+      <p>{{card.location}}</p>
     </li>
   </ul>
 </div>
