@@ -1,5 +1,7 @@
 import {GiftCards} from '../collections/gift-cards.ts';
 
+// to simulate blockchain data
+
 export function loadGiftCards() {
   if (GiftCards.find().count() === 0) {
 
@@ -9,6 +11,7 @@ export function loadGiftCards() {
         'description': 'Tällä lahjakortilla saat jäätelöä.',
         'location': 'Helsinki',
         'value' : 50,
+        'address' : 'xxx',
         'owner' : 'tuomas.saranen@gmail.com'
       },
       {
@@ -16,6 +19,7 @@ export function loadGiftCards() {
         'description': 'Tällä lahjakortilla saat kahvia',
         'location': 'Pääkaupunkiseutu',
         'value' : 50,
+        'address' : 'yyy',
         'owner' : 'tuomas.saranen@gmail.com'
       },
       {
@@ -23,6 +27,7 @@ export function loadGiftCards() {
         'description': 'Tällä lahjakortilla voit maksaa taksikyytisi',
         'location': 'Suomi',
         'value' : 50,
+        'address' : 'ppp',
         'owner' : 'tuomas.saranen@gmail.com'
       }
     ];
